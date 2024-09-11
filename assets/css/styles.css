@@ -60,10 +60,10 @@ html {
 }
 
 * {
-  box-sizing: inherit; /* التأكد من أن الهوامش والحشوات لا تؤثر على العرض الكلي */
+  box-sizing: inherit; 
 }
 
-@media only screen and (max-width: 100px) {
+@media only screen and (max-width: 540px) {
   body,
   html {
     margin: 0;
@@ -247,7 +247,7 @@ img {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #00000038; /* لون المثلث */
+  border-top: 10px solid #00000038; 
 }
 
 .icons img {
