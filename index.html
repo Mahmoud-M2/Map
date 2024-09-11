@@ -40,6 +40,7 @@
         </div>
 
         <nav class="nav container">
+
             <div class="logo">
                 <img src="./assets/img/Logo.png" alt="Logo">
             </div>
@@ -77,7 +78,7 @@
                 </ul>
             </div>
             <div class="icons">
-                <div onclick="showNotification(event)">
+                <div class="icon_nfn" onclick="showNotification(event)">
 
                     <span class="notification-icon" style="color: #a82a2a;">🔔</span>
                     <div class="triangle"></div>
@@ -116,17 +117,143 @@
                     </div>
                 </div>
 
-                <img src="./assets//img/dashboard/customer.png" alt="" class="nav__img">
+                <div class="popup_profile">
+                    <div class="img_popup" id="open-popup" onclick="toggleProfileContent(event)">
+                        <img src="./assets/img/dashboard/customer.png" alt="" class="nav__img">
+                        <img class="Profile" src="./assets/img/dashboard/customer.png" alt="Profile">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="triangle" id="triangle2"></div>
+                </div>
 
-                <img class="Profile" src="./assets//img/dashboard/customer.png" alt="Profile">
 
+                <style>
+                    .img_popup {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                </style>
+
+                <div class="profile_content">
+                    <div class="profile-card">
+                        <div class="profile-info">
+                            <img src="./assets/img/dashboard/customer.png" alt="Profile Picture" class="profile-image">
+                            <div class="info">
+                                <div class="profile-name">@name</div>
+                                <div class="profile-email">email@example.com</div>
+                            </div>
+
+                        </div>
+                        <div class="btn-edit">
+                            <a href="#" class="edit-profile-button">Edit Profile</a>
+
+                        </div>
+                        <div class="divider"></div>
+                        <div class="profile-info">
+                            <div class="profile-image-wrapper">
+                                <i class="fa-solid fa-money-bill"></i>
+                            </div>
+                            <div class="balance-info">
+                                <span class="balance-text">Current Balance:</span>
+                                <span class="balance-amount">400$</span>
+                            </div>
+
+                        </div>
+                        <div class="divider"></div>
+                        <div class="profile-info">
+
+                            <div class="profile-image-wrapper">
+                                <img style="margin: 0;" src="./assets/img/dashboard/blue.png" alt="Profile Picture"
+                                    class="profile-image">
+                            </div>
+                            <div class="balance-info">
+                                <span class="balance-text">Current Purchanes</span>
+
+                            </div>
+                            <div class="pop-slider">
+                                <a>1</a>
+                                <i class="fa-solid fa-chevron-right icon"></i>
+                            </div>
+
+
+                        </div>
+                        <div class="divider"></div>
+                        <div class="profile-info">
+
+                            <div class="profile-image-wrapper">
+                                <img style="margin: 0;" src="./assets/img/dashboard/green.png" alt="Profile Picture"
+                                    class="profile-image">
+                            </div>
+                            <div class="balance-info">
+                                <span class="balance-text">Previous Purchanes</span>
+
+                            </div>
+                            <div class="pop-slider">
+                                <a>3</a>
+                                <i class="fa-solid fa-chevron-right icon"></i>
+                            </div>
+
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="profile-info">
+
+                            <div class="profile-image-wrapper">
+
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="balance-info">
+                                <span class="balance-text">Change Password</span>
+
+                            </div>
+                            <div class="pop-slider">
+                                <a></a>
+                                <i class="fa-solid fa-chevron-right icon"></i>
+                            </div>
+
+                        </div>
+                        <div class="divider"></div>
+
+                        <div class="profile-info">
+
+                            <div class="profile-image-wrapper">
+
+                                <!-- <img style="margin: 0;" src="./assets/img/dashboard/blue.png" alt="Profile Picture" class="profile-image"> -->
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                            <div class="balance-info">
+                                <span class="balance-text">Log Out</span>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <style>
+                        .pop-slider {
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            position: absolute;
+                            right: 0;
+
+                        }
+                    </style>
+
+                </div>
             </div>
         </nav>
+
     </header>
 
+
+
     <main>
+
         <!--=============== HOME ===============-->
         <section class="container section section__height" id="home">
+
             <div class="title">
                 <div class="home_text">
                     <h1>Gaza Strip Camps Locations<br>And Their Need For <span>Water</span></h1>
@@ -143,21 +270,27 @@
                         <i class="bx bx-search"></i>
                         <input type="text" placeholder="Search..." class="search-input">
                     </div>
-                    <select class="search-dropdown">
-                        <option value="all-camps">All Camps</option>
-                        <option value="location">Location</option>
-                        <option value="need-for-water">Need For Water</option>
-                        <option value="camp-size">Camp Size</option>
-                    </select>
+                    <div class="app_flex">
+
+                        <select class="search-dropdown">
+                            <option value="all-camps">All Camps</option>
+                            <option value="location">Location</option>
+                            <option value="need-for-water">Need For Water</option>
+                            <option value="camp-size">Camp Size</option>
+                        </select>
+                        <button class="search-button">Search</button>
+
+                    </div>
                 </div>
-                <button class="search-button">Search</button>
+
             </div>
         </section>
         <section class="section_map">
 
+
             <div class="Map_svg container">
 
-                <div class="gaza_strip" style="padding-bottom: 180px;">
+                <div class="gaza_strip">
                     <div class="home_maps">
                         <div class="palestine">
                             <img src="./assets/img/palestine.png">
@@ -185,34 +318,198 @@
                     </div>
 
                     <div class="center_map">
-                        <div class="rafah">
+                        <div class="rafah move">
                             <div class="rotations">
                                 <div class="center_img">
-                                    <img class="camp5" src="./assets/img/camp.png" alt="" srcset="">
+                                    <img class="camp5 camp-image" data-popup="popup1" src="./assets/img/camp.png" alt=""
+                                        srcset="">
+                                    <div id="popup1" class="popup">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849);     margin-left: 13px;">Camp 1
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <h1>Rafah</h1>
                             </div>
                             <img src="./assets/img/no (5).png" alt="" srcset="">
 
                         </div>
-                        <div class="Khan_younes">
+                        <div class="Khan_younes ">
                             <div class="rotations">
                                 <div class="center_img">
-                                    <img class="camp4" src="./assets/img/camp.png" alt="" srcset="">
+
+                                    <img class="camp4 camp-image" data-popup="popup2" src="./assets/img/camp.png" alt=""
+                                        srcset="">
+                                    <div id="popup2" class="popup">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849);     margin-left: 13px;">Camp 2
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <h1>Khan Younes</h1>
                             </div>
                             <div class="center_img">
                                 <img src="./assets/img/no (4).png" alt="" srcset="">
+
                             </div>
 
                         </div>
-                        <div class="Dair">
+
+                        <!-- dair  3 (a/b/c) -->
+                        <div class="Dair ">
                             <div class="rotations">
                                 <div class="dair_camps">
-                                    <img class="dair_camp1" src="./assets/img/camp.png" alt="" srcset="">
-                                    <img class="dair_camp2" src="./assets/img/camp.png" alt="" srcset="">
-                                    <img class="dair_camp3" src="./assets/img/camp.png" alt="" srcset="">
+                                    <img class="dair_camp1 camp-image" data-popup="popup3" src="./assets/img/camp.png"
+                                        alt="" srcset="">
+                                    <div id="popup3" class="popup popup3">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849); margin-left: 13px;">Camp 3
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--******* b ***************************************-->
+                                    <img class="dair_camp2 camp-image" data-popup="popup4" src="./assets/img/camp.png"
+                                        alt="" srcset="">
+                                    <div id="popup4" class="popup popup3">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849); margin-left: 13px;">Camp B
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- ********* C *********************-->
+                                    <img class="dair_camp3 camp-image" data-popup="popup5" src="./assets/img/camp.png"
+                                        alt="" srcset="">
+                                    <div id="popup5" class="popup popup3">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849); margin-left: 13px;">Camp C
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <h1>Dair Al Balah</h1>
@@ -225,7 +522,38 @@
                         <div class="gaza">
                             <div class="rotations">
                                 <div class="center_img">
-                                    <img class="camp2" src="./assets/img/camp.png" alt="" srcset="">
+                                    <img class="camp2 camp-image" data-popup="popup6" src="./assets/img/camp.png" alt=""
+                                        srcset="">
+                                    <div id="popup6" class="popup popup3">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849); margin-left: 13px;">Camp 4
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <h1>Gaza City</h1>
                             </div>
@@ -236,13 +564,45 @@
                         <div class="north_gaza">
                             <div class="rotations">
                                 <div class="center_img">
-                                    <img class="camp1" src="./assets/img/camp.png" alt="" srcset="">
+                                    <img class="camp1 camp-image" data-popup="popup7" src="./assets/img/camp.png" alt=""
+                                        srcset="">
+                                    <div id="popup7" class="popup popup3">
+                                        <div class="popup-header">
+                                            <span style="color: rgba(0, 0, 0, 0.849); margin-left: 13px;">Camp 5
+                                                Details</span>
+                                            <button class="close-btn">×</button>
+                                        </div>
+                                        <div class="popup-content">
+                                            <div class="content-section">
+                                                <div class="content-item">
+                                                    <img src="./assets/img/Group.png" alt="Member 1"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+                                                        <h1 class="num">32.513</h1>
+                                                        <span>Members</span>
+                                                    </div>
+                                                </div>
+                                                <div class="divider"></div>
+                                                <div class="content-item">
+                                                    <img src="./assets/img/dashboard/blue.png" alt="Member 2"
+                                                        class="circular-image">
+                                                    <div class="data_content">
+
+                                                        <h1 class="num">+32,513,000L</h1>
+                                                        <span>Another Info</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <h1>North Gaza</h1>
                             </div>
                             <img src="./assets/img/no (1).png" alt="" srcset="">
 
                         </div>
+
 
 
                         <svg width="1530" height="1205" viewBox="0 0 1530 1205" fill="none"
@@ -1073,33 +1433,55 @@
                                 transform="matrix(0.999458 -0.0329072 0.0329542 0.999457 1149.94 278.613)"
                                 fill="#FF0000"></ellipse>
                         </svg>
-                        <div class="pop_up">
-                            <div class="statistics">
-                                <div class="camps" style="margin-right: 15px;">
-                                    <div class="total_camps"></div>
-                                    <div class="camps_info">
-                                        <p class="total_num">08</p>
-                                        <p class="total">Total Number Of Camps</p>
-                                    </div>
+
+                    </div>
+                    <div class="pop_up">
+                        <div class="statistics">
+                            <div class="camps">
+                                <div class="total_camps"></div>
+                                <div class="camps_info">
+                                    <img class="custom" src="./assets/img/camp.png" alt="" srcset="">
+                                    <h1 class="total_num">08</h1>
+                                    <p class="total">Total Number Of Camps</p>
                                 </div>
-                                <div class="displaced">
-                                    <div class="total_displaced"></div>
-                                    <div class="displaced_info">
-                                        <p class="total_num">+2.1M</p>
-                                        <p class="total">Total Number Of Displaced Persons</p>
-                                    </div>
+                            </div>
+                            <div class="displaced">
+                                <div class="total_displaced"></div>
+                                <div class="displaced_info">
+                                    <img class="custom" src="./assets/img/Group.png" alt="" srcset="">
+                                    <h1 class="total_num">+2.1M</h1>
+                                    <p class="total">Total Number Of Displaced Persons</p>
                                 </div>
-                                <div class="water_req">
-                                    <div class="total_req"></div>
-                                    <div class="req_info">
-                                        <p class="total_num">+210M L</p>
-                                        <p class="total">Total Amount Of Water Required</p>
-                                    </div>
+                            </div>
+                            <div class="water_req">
+                                <div class="total_req"></div>
+                                <div class="req_info">
+                                    <img src="./assets/img/Vector.png" alt="" srcset="">
+                                    <h1 class="total_num">+210M L</h1>
+                                    <p class="total">Total Amount Of Water Required</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <style>
+                        .total_num {
+                            font-size: 1.4rem !important;
+                            margin-top: 15px;
+                            color: black;
+                        }
 
+                        .total {
+                            font-size: 0.8rem !important;
+                        }
+
+                        .pop-up img {
+                            margin: 10px 0;
+                        }
+
+                        .water_req {
+                            transform: translateY(-14px);
+                        }
+                    </style>
                 </div>
 
             </div>
@@ -1107,7 +1489,7 @@
         </section>
     </main>
 
- 
+
 
 
 
