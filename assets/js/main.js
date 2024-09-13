@@ -1,4 +1,5 @@
 /*=============== Language Ar || En ===============*/
+
 function changeLanguage(lang, flagSrc, langText) {
     document.getElementById('current-language').innerHTML = `<img src="${flagSrc}" class="flag" alt="${langText} Flag"> ${lang}`;
 }
@@ -123,3 +124,27 @@ document.addEventListener('click', function(event) {
             popup.style.display = 'none';
         });
     } });
+
+
+
+    
+    // Slide Path Maps
+    const paths = document.querySelectorAll('.paths');
+    const slides = document.querySelectorAll('.slide');
+    const errors = document.querySelectorAll('.error');
+    
+    paths.forEach((path, index) => {
+        path.addEventListener('click', () => {
+            slides.forEach(slide => slide.classList.remove('active'));
+            const slide = document.getElementById(`slide${index + 1}`);
+            slide.classList.add('active');
+        });
+    });
+    
+    errors.forEach((error, index) => {
+        error.addEventListener('click', (e) => {
+            e.stopPropagation();
+            slides[index].classList.remove('active');
+        });
+    });
+    
