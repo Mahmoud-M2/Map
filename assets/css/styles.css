@@ -60,10 +60,10 @@ html {
 }
 
 * {
-  box-sizing: inherit; 
+  box-sizing: inherit; /* التأكد من أن الهوامش والحشوات لا تؤثر على العرض الكلي */
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   body,
   html {
     margin: 0;
@@ -93,7 +93,8 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .section {
-  padding: 4.5rem 0 2rem;
+  /* padding: 4.5rem 0 2rem; */
+  padding: 6.5rem 0 4rem;
 }
 
 .section__title {
@@ -247,7 +248,7 @@ img {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #00000038; 
+  border-top: 10px solid #00000038; /* لون المثلث */
 }
 
 .icons img {
@@ -640,6 +641,10 @@ img {
   cursor: pointer;
 }
 
+
+
+
+
 /*=============== MEDIA QUERIES ===============*/
 
 @media screen and (max-width: 320px) {
@@ -902,11 +907,16 @@ img {
 .palestine {
   /* display: flex; */
   align-items: center;
-  margin-left: 30px;
+  margin-left: 26px;
+  /* margin-left: 30px; */
 }
 .palestine .map_info {
+  width:40%;
   padding-top: 2%;
 }
+
+
+
 
 .palestine .map_info .info {
   display: flex;
@@ -955,7 +965,7 @@ img {
   position: relative;
 }
 .gaza_strip {
-  padding: 0 0 100px 0;
+  /* padding: 0 0 100px 0; */
   position: absolute;
 }
 .Map_svg svg {
@@ -1078,7 +1088,64 @@ path {
   /* position: absolute; */
 }
 
+/* ***********************slide (Path) Maps**************************************** */
+.slide {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 40%;
+  height: 100%;
+  background-color: #f0f0f0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  border-radius: 0 10px 10px 0;
+}
+
+
+
+
+
+.slide.active {
+  left: 0;
+}
+
+.error {
+  position: absolute;
+  top: 7px;
+  right: 13px;
+  font-size: 20px;
+  color: #000000;
+  cursor: pointer;
+}
+#icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #000000;
+  line-height: 1;
+  text-align: center;
+}
+
+
+path {
+  
+  transition: stroke 0.2s ease;
+}
+
+
+
 /* ***********************Pop Up Maps**************************************** */
+
+
+
+
+
 
 .popup,
 .popup2 {
@@ -1173,14 +1240,29 @@ path {
     /* display: block;
       text-align: start; */
   }
-  .center_map {
-    transform: rotateZ(-28deg);
+  /* .center_map {
+    transform: rotateZ(-40deg);
     top: 75px;
-  }
+  } */
+
+  /* .center_map {
+    transform: rotateZ(-40deg);
+    top: -220px;
+    left: 0%;
+} */
+
+.center_map {
+  transform: rotateZ(-40deg);
+  top: -190px;
+  left: 10%;
+}
+
 
   .statistics {
-    margin-top: 140px;
+    /* margin-top: 140px; */
     display: block;
+    margin-bottom: 200px;
+    margin-top: -42px;
   }
 
   .water_req {
@@ -1215,6 +1297,29 @@ path {
   }
 }
 
+.total_num {
+  font-size: 1.4rem !important;
+  margin-top: 15px;
+  color: black;
+}
+
+.total {
+  font-size: 0.8rem !important;
+}
+
+.pop-up img {
+  margin: 10px 0;
+}
+
+.water_req {
+  transform: translateY(-14px);
+}
+
+
+
+
+
+
 @media (max-width: 2560px) {
   .camp1 {
     transform: translate(0, 184px);
@@ -1229,6 +1334,7 @@ path {
     left: 107%;
   }
 }
+
 
 @media (max-width: 1290px) {
   .camp5 {
@@ -1260,6 +1366,80 @@ path {
     left: 147%;
   }
 }
+
+@media (min-width: 200px) {
+  #Member1 {
+    transform: translate(14px, 24px);
+} }
+
+
+@media (min-width: 608px) {
+  /* #Member1 {
+      transform: translate(14px, 61px);
+  } */
+  #Member1 {
+    transform: translate(14px, 150px);
+
+    }
+
+
+}
+@media (min-width: 860px) {
+  #popup6 {
+    left: -347% !important;
+    top: 42% !important;
+}
+
+
+}
+
+
+
+
+
+@media (min-width: 400px) {
+  #Member1{
+    transform: translate(27px, 62px);
+ }}
+
+
+
+@media (min-width: 600px) {
+  #Member1{
+    transform: translate(62px, 43px);  }}
+@media (min-width: 1000px) {
+  #Member1{
+    transform: translate(63px, 113px);
+  }}
+
+
+@media (min-width: 1200px) {
+ 
+  
+  .dair_camp3 {
+    top: 60%;
+    left: 131%;
+}
+.dair_camp2 {
+  position: absolute;
+  top: 75%;
+  left: 86%;
+}
+}
+
+
+
+
+
+@media (min-width: 900px) {
+  .center_map img {
+    width: 30px;
+}
+}
+
+
+
+
 
 @media (max-width: 1024px) {
   .camp1 {
@@ -1470,7 +1650,23 @@ path {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 650px) {
+
+  .camp1 {
+    transform: translate(3px, 95px);
+}
+
+
+  .dair_camp2 {
+    top: 50%;
+    left: 69%;
+}
+
+.dair_camp3 {
+        top: 39%;
+        left: 87%;
+    }
+
   .Dair {
     left: 38%;
   }
@@ -1496,7 +1692,18 @@ path {
   height: 30px;
 }
 
+
+
+
 @media (max-width: 600px) {
+  #Member1 {
+    transform: translate(31px, 70px);
+}
+ 
+
+  .slide {
+    width:75%;
+  }
   .dair_camps {
     left: 8%;
   }
@@ -1510,9 +1717,10 @@ path {
     top: 20%;
   }
   .dair_camp2 {
-    top: 40%;
-    left: 100%;
-  }
+    top: 48%;
+    left: 82%;
+}
+
   .gaza {
     right: 29%;
     top: 23%;
@@ -1532,6 +1740,20 @@ path {
 }
 
 @media (max-width: 540px) {
+
+  .palestineImg{
+    width: 25%;
+  }
+
+
+  .text{
+    font-size:12px;
+  }
+  
+
+
+
+
   #home .search-dropdown {
     width: auto;
   }
@@ -1554,7 +1776,7 @@ path {
   #popup5,
   #popup6,
   #popup7 {
-    transform: rotateZ(27.3deg);
+    transform: rotateZ(39.3deg);
     z-index: 999;
   }
   #popup7 {
@@ -1562,7 +1784,7 @@ path {
     top: 281% !important;
   }
   #popup6 {
-    left: -116% !important;
+    left: -195% !important;
     top: 84% !important;
   }
   .gaza {
@@ -1595,10 +1817,32 @@ path {
   #popup2 {
     top: 64%;
   }
+  #popup1 {
+    left:-285%;
+  }
   .section_map .divider {
     transform: rotateZ(0deg);
     width: 100%;
     margin-left: 10px;
+  }
+  .pop_up img{
+    border:solid 1px #0000003b;
+    padding:5px;
+    width:40px;
+    height:40px;
+
+border-radius:10px;
+  }
+  .pop_up .water_req img{
+    width:40px;
+    height:40px;
+    
+
+
+  }
+  .pop_up h1{
+    font-size: 22px !important;
+
   }
 }
 
@@ -1635,6 +1879,25 @@ path {
   }
 }
 
+@media (max-width: 530px) {
+  .camp1 {
+    transform: translate(4px, 122px);
+}    .dair_camp3 {
+  top: 33%;
+  left: 123%;
+}
+.dair_camp2 {
+  top: 55%;
+  left: 97%;
+}
+
+.dair_camp1 {
+  right: 20%;
+  top: 13%;
+}
+
+
+}
 @media (max-width: 480px) {
   .dair_camp2 {
     top: 48%;
@@ -1703,6 +1966,14 @@ path {
   }
 }
 @media (max-width: 412px) {
+
+
+  @media (min-width: 280px) {
+    #Member1 {
+      transform: translate(21px, 41px);
+  }}
+
+
   .camp1 {
     transform: translate(10px, 93px);
   }
@@ -1946,3 +2217,5 @@ path {
     right: -2%;
   }
 }
+
+
