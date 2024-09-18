@@ -1251,22 +1251,30 @@ path {
     left: 0%;
 } */
 
-.center_map {
+
+/* .center_map {
   transform: rotateZ(-40deg);
   top: -190px;
-  left: 10%;
+  left: 15%;
+} */
+.center_map {
+  width: 118%;
+  transform: rotateZ(-40deg);
+  top: -190px;
+  left: 2%;
 }
 
 
   .statistics {
     /* margin-top: 140px; */
     display: block;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
     margin-top: -42px;
   }
 
   .water_req {
     margin-top: 50px;
+    margin-bottom: 120px;
   }
   .camps_info {
     margin-bottom: 50px;
@@ -1435,6 +1443,14 @@ path {
   .center_map img {
     width: 30px;
 }
+}
+@media (min-width: 541px) {
+  .center_map {
+    transform: translateY(-150px);
+  }
+  .pop_up {
+
+    transform: translateY(-270px) !important ;}
 }
 
 
@@ -1780,11 +1796,11 @@ path {
     z-index: 999;
   }
   #popup7 {
-    left: -283% !important;
+    left: -330% !important;
     top: 281% !important;
   }
   #popup6 {
-    left: -195% !important;
+    left: -250% !important;
     top: 84% !important;
   }
   .gaza {
@@ -2040,6 +2056,8 @@ border-radius:10px;
 }
 
 @media (max-width: 360px) {
+  
+
   .camp1 {
     transform: translate(-26px, 62px);
   }
@@ -2062,7 +2080,7 @@ border-radius:10px;
 
   #home .search-dropdown {
     border: 1px solid #cccccc;
-    border-radius: 0 10px 10px 0;
+    border-radius:  10px 10px !important;
     outline: none;
     padding: 15px;
     /* font-size: 16px; */
