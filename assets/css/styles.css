@@ -192,7 +192,7 @@ img {
 .nav__list,
 .nav__link {
   display: flex;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .nav__link {
@@ -1444,7 +1444,7 @@ path {
   }
   .dair_camp2 {
     top: 60%;
-    left: 86%;
+    left: 77%;
   }
   .dair_camp3 {
     top: 52%;
@@ -1593,10 +1593,7 @@ path {
 }
 
 @media (max-width: 712px) {
-  .dair_camp2 {
-    top: 50%;
-    left: 82%;
-  }
+
 
   .camp1 {
     transform: translate(-5px, 110px);
@@ -1610,8 +1607,13 @@ path {
     left: 108%;
   }
   .dair_camp1 {
-    right: 45%;
+    right: 16%;
   }
+  .dair_camp2 {
+    top: 57% !important;
+    left: 90% !important;
+}
+
 
   #popup6 {
     left: -113% !important;
@@ -1629,14 +1631,20 @@ path {
   }
 }
 
+@media (max-width: 640px) {
+  .dair_camp1 {
+    right: 35%;
+}
+
+}
 @media (max-width: 650px) {
   .camp1 {
     transform: translate(3px, 95px);
   }
 
   .dair_camp2 {
-    top: 50%;
-    left: 69%;
+    top: 50%  !important;
+    left: 69% !important;
   }
 
   .dair_camp3 {
@@ -1690,8 +1698,8 @@ path {
     top: 14%;
 }
   .dair_camp2 {
-    top: 48%;
-    left: 82%;
+    top: 48%  !important;
+    left: 82% !important;
   }
 
   .gaza {
@@ -1742,6 +1750,7 @@ path {
 
 
 @media (max-width: 540px) {
+
   .palestineImg {
     width: 25%;
   }
@@ -1796,13 +1805,16 @@ path {
   .camp2 {
     transform: translate(6px, -11px);
   }
+  .camp4 {
+    transform: translate(-21px, -13px);
+}
   .dair_camps {
     top: -20px;
   }
 
   .dair_camp2 {
-    top: 7%;
-    left: 90%;
+    top: 7%   !important;
+    left: 90% !important;
 }
   .dair_camp3 {
     top: -16%;
@@ -1925,8 +1937,8 @@ path {
     transform: translate(23px, 47px);
 }
   .dair_camp2 {
-    top: -17%;
-    left: 125%;
+    top: -17%  !important;
+    left: 125% !important;
 }
 .dair_camp3 {
   top: -8%;
@@ -1945,7 +1957,7 @@ path {
   .north_gaza {
     position: absolute;
     right: -5%;
-    top: 6%;
+    top: 6%   ;
   }
 }
 
@@ -1955,8 +1967,8 @@ path {
     left: 122%;
   }
   .dair_camp2 {
-    top: -2%;
-    left: 122%;
+    top: -2%   !important;
+    left: 122% !important;
 }
   .dair_camps {
     left: -9%;
@@ -2012,8 +2024,8 @@ path {
   transform: translate(-15px, -41px);
 }
 .dair_camp2 {
-  top: -1%;
-  left: 119%;
+  top: -1%   !important;
+  left: 119% !important;
 }
 .dair_camp3 {
   top: 4%;
@@ -2166,10 +2178,11 @@ path {
     left: 40px;
     top: 34%;
 }
-  .dair_camp2 {
-    top: 38%;
-    left: 107%;
-  }
+.dair_camp2 {
+  position: absolute;
+  top: 34% !important;
+  left: 101% !important;
+}
   .dair_camp3 {
     top: 33px;
     transform: translateY(14px);
@@ -2290,7 +2303,7 @@ path {
     left: 31%;
   }
   .dair_camp2 {
-    top: 4%;
+    top: 4% !important;
     left: 88% !important;
   }
   .camp1 {
