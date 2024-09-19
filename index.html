@@ -19,135 +19,112 @@
 <body>
 
     <!--=============== HEADER ===============-->
+ <!-- Nav Start -->
+    <!--=============== HEADER ===============-->
     <header class="header" id="header">
-        <div class="language container">
-            <div class="language-dropdown">
-                <button class="language-btn" id="current-language">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                        class="flag" alt="US Flag"> EN
-                </button>
-                <div class="dropdown-content">
-                    <a href="#"
-                        onclick="changeLanguage('EN', 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg', 'English')">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-                            class="flag" alt="US Flag"> EN
-                    </a>
-                    <a href="#" onclick="changeLanguage('Ar', './assets/img/almmlk-alaarby.png', 'Saudi Arabia')">
-                        <img src="./assets/img/almmlk-alaarby.png" class="flag" alt="Saudi Flag">ِAr
-                    </a>
-                </div>
-            </div>
-        </div>
-
         <nav class="nav container">
-
             <div class="logo">
                 <img src="./assets/img/Logo.png" alt="Logo">
             </div>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="/home.html/#home" class="nav__link">
                             <i class='bx bx-home-alt nav__icon'></i>
                             <span class="nav__name">Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class='fa-regular fa-file nav__icon'></i>
+                        <a href="/home.html/#about" class="nav__link">
+                            <i class='bx bx-file-blank nav__icon'></i>
                             <span class="nav__name">About Us</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#skills" class="nav__link">
+                        <a href="/home.html/#skills" class="nav__link">
                             <i class='bx bx-book-alt nav__icon'></i>
                             <span class="nav__name">Touching Stories</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class='fas fa-envelope nav__icon'></i>
+                        <a href="/home.html/#portfolio" class="nav__link">
+                            <i class='bx bx-envelope nav__icon'></i>
                             <span class="nav__name">Contact Us</span>
                         </a>
                     </li>
-
-
                 </ul>
             </div>
             <div class="icons">
                 <div class="icon_nfn" onclick="showNotification(event)">
-
-                    <span class="notification-icon" style="color: #a82a2a;">🔔</span>
+                    <span class="notification-icon"><i class="bx bx-bell"></i></span>
                     <div class="triangle"></div>
-
                     <div id="notification" class="notification">
-                        <h4 class="notification_title_info">notification</h4>
-                        <div class="info_1">
+                        <h4 class="notification_title_info">Notifications</h4>
+                        <div class="info_2 info">
+                            <img src="./assets/img/dashboard/notification.png" alt="Image" class="notification-image">
                             <div class="info_natification">
-                                <img src="./assets/img/dashboard/notification.png" alt="Image"
-                                    class="notification-image">
-                                <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed do
-                                    eiusmod tempor </p>
-
-                            </div>
-                            <div class="notification-category-button">
+                                <p class="notification-text">A Campaign Has Been Launched To Distribute Water In Mawasi Khan Yunis. You Can Contribute To It By Purchasing Water For The Area.</p>
                                 <p class="notification-category">2D</p>
-                                <button class="notification-button">Buy Water</button>
-                            </div>
-                            <hr style="margin: 10px 0;">
-                        </div>
-                        <div class="info_1">
-                            <div class="info_natification">
-                                <img src="./assets/img/dashboard/notification.png" alt="Image"
-                                    class="notification-image">
-                                <p class="notification-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                            </div>
-                            <div class="notification-category-button">
-                                <p class="notification-category">2D</p>
+                                <button class="notification-button"><a href="#" style="color: #ffffff;">Buy Water</a></button>
                             </div>
                         </div>
-
+                        <hr style="margin: 10px 0;">
+                        <div class="info_2 info">
+                            <img src="./assets/img/dashboard/notification.png" alt="Image" class="notification-image">
+                            <div class="info_natification">
+                                <p class="notification-text">The Water Distribution Campaign For Northern Gaza Will Begin Within A Few Weeks</p>
+                                <p class="notification-category">1W</p>
+                            </div>
+                        </div>
+                        <hr style="margin: 10px 0;">
+                        <div class="info_2 info">
+                            <img src="/img/dashboard/notification.png" alt="Image" class="notification-image">
+                            <div class="info_natification">
+                                <p class="notification-text">The Water Distribution Campaign For Deir Al-Balah, Which You Contributed To, Has Been Implemented</p>
+                                <p class="notification-category">1W</p>
+                            </div>
+                        </div>
+                        <hr style="margin: 10px 0;">
+                        <div class="info_2 info">
+                            <img src="/img/dashboard/notification.png" alt="Image" class="notification-image">
+                            <div class="info_natification">
+                                <p class="notification-text">You Have Been Logged In To Your Account From An Unknown Browser</p>
+                                <p class="notification-category">3W</p>
+                            </div>
+                        </div>
+                        <hr style="margin: 10px 0;">
+                        <div class="info_2 info">
+                            <img src="/img/dashboard/notification.png" alt="Image" class="notification-image">
+                            <div class="info_natification">
+                                <p class="notification-text">You Have Been Logged In To Your Account From An Unknown Browser</p>
+                                <p class="notification-category">3W</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="popup_profile">
                     <div class="img_popup" id="open-popup" onclick="toggleProfileContent(event)">
-                        <img src="./assets/img/dashboard/customer.png" alt="" class="nav__img">
-                        <img class="Profile" src="./assets/img/dashboard/customer.png" alt="Profile">
+                        <img src="/img/dashboard/customer.png" alt="" class="nav__img">
+                        <img class="Profile" src="/img/dashboard/customer.png" alt="Profile">
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
                     <div class="triangle" id="triangle2"></div>
                 </div>
 
-
-                <style>
-                    .img_popup {
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                    }
-                </style>
-
                 <div class="profile_content">
                     <div class="profile-card">
                         <div class="profile-info">
-                            <img src="./assets/img/dashboard/customer.png" alt="Profile Picture" class="profile-image">
+                            <img src="/img/dashboard/customer.png" alt="Profile Picture" class="profile-image">
                             <div class="info">
                                 <div class="profile-name">@name</div>
                                 <div class="profile-email">email@example.com</div>
                             </div>
-
                         </div>
                         <div class="btn-edit">
                             <a href="#" class="edit-profile-button">Edit Profile</a>
-
                         </div>
                         <div class="divider"></div>
                         <div class="profile-info">
@@ -158,94 +135,142 @@
                                 <span class="balance-text">Current Balance:</span>
                                 <span class="balance-amount">400$</span>
                             </div>
-
                         </div>
                         <div class="divider"></div>
                         <div class="profile-info">
-
                             <div class="profile-image-wrapper">
-                                <img style="margin: 0;" src="./assets/img/dashboard/blue.png" alt="Profile Picture"
+                                <img style="margin: 0;" src="/img/dashboard/blue.png" alt="Profile Picture"
                                     class="profile-image">
                             </div>
                             <div class="balance-info">
-                                <span class="balance-text">Current Purchanes</span>
-
+                                <span class="balance-text active">Current Purchanes</span>
                             </div>
                             <div class="pop-slider">
                                 <a>1</a>
                                 <i class="fa-solid fa-chevron-right icon"></i>
                             </div>
-
-
                         </div>
                         <div class="divider"></div>
                         <div class="profile-info">
-
                             <div class="profile-image-wrapper">
-                                <img style="margin: 0;" src="./assets/img/dashboard/green.png" alt="Profile Picture"
+                                <img style="margin: 0;" src="/img/dashboard/green.png" alt="Profile Picture"
                                     class="profile-image">
                             </div>
                             <div class="balance-info">
-                                <span class="balance-text">Previous Purchanes</span>
-
+                                <a href="/previous/previous.html" class="balance-text">Previous Purchanes</a>
                             </div>
                             <div class="pop-slider">
                                 <a>3</a>
                                 <i class="fa-solid fa-chevron-right icon"></i>
                             </div>
-
                         </div>
                         <div class="divider"></div>
-
                         <div class="profile-info">
-
                             <div class="profile-image-wrapper">
-
                                 <i class="fa-solid fa-lock"></i>
                             </div>
                             <div class="balance-info">
-                                <span class="balance-text">Change Password</span>
-
+                                <span class="balance-text pass_change">Change Password</span>
                             </div>
                             <div class="pop-slider">
                                 <a></a>
                                 <i class="fa-solid fa-chevron-right icon"></i>
                             </div>
-
                         </div>
                         <div class="divider"></div>
-
                         <div class="profile-info">
-
                             <div class="profile-image-wrapper">
-
-                                <!-- <img style="margin: 0;" src="./assets/img/dashboard/blue.png" alt="Profile Picture" class="profile-image"> -->
                                 <i class="fa-solid fa-right-from-bracket"></i>
                             </div>
                             <div class="balance-info">
                                 <span class="balance-text">Log Out</span>
-
                             </div>
-
-
                         </div>
                     </div>
-                    <style>
-                        .pop-slider {
-                            display: flex;
-                            align-items: center;
-                            cursor: pointer;
-                            position: absolute;
-                            right: 0;
-
-                        }
-                    </style>
-
+                </div>
+                <div class="lang">
+                    <a href="#" class="language">AR</a>
                 </div>
             </div>
         </nav>
-
+        <!-- Nav Popup Start -->
+        <!-- Profile Popup -->
+        <div class="popup" Id="profilepopup">
+            <div class="popup-content">
+                <div class="popup_top">
+                    <p class="popup_title">Edit Profile</p>
+                    <i id="close-profile" class="bx bx-x"></i>
+                </div>
+                <div class="profile_img">
+                    <div class="edit">
+                        <i class="bx bx-edit"></i>
+                    </div>
+                </div>
+                <div class="input Profile_input">
+                    <div class="input-container name">
+                        <label for="fname">User name</label>
+                        <div class="input-frame">
+                            <i class='bx bx-user'></i>
+                            <input id="fname" name="fname" placeholder="Username" type="text">
+                        </div>
+                    </div>
+                    <div class="input-container email">
+                        <label for="email">Email</label>
+                        <div class="input-frame">
+                            <i class='bx bx-envelope'></i>
+                            <input id="email" name="email" placeholder="email" type="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="save-btn" type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+        <!-- Change Password Popup -->
+        <div class="popup" id="changepass_popup">
+            <div class="popup-content">
+                <div class="popup_top">
+                    <p class="popup_title">Change Password</p>
+                    <i id="close-changepass" class="bx bx-x"></i>
+                </div>
+                <div class="change_img">
+                    <img src="./assets/img/dashboard/lock.png">
+                </div>
+                <div class="input change_input">
+                    <div class="input-container password">
+                        <label for="password">Old Password</label>
+                        <div class="input-frame">
+                            <i class='bx bx-lock'></i>
+                            <input id="password" name="old" placeholder="old password" type="password">
+                            <i class='bx bx-hide' id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="input-container password">
+                        <label for="password">New Password</label>
+                        <div class="input-frame">
+                            <i class='bx bx-lock'></i>
+                            <input id="password_1" name="new" placeholder="new password" type="password">
+                            <i class='bx bx-hide' id="togglePassword_1"></i>
+                        </div>
+                    </div>
+                    <div class="input-container password">
+                        <label for="password">Confirm Password</label>
+                        <div class="input-frame">
+                            <i class='bx bx-lock'></i>
+                            <input id="password_2" name="confirm" placeholder="confirm password" type="password">
+                            <i class='bx bx-hide' id="togglePassword_2"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="change-btn" type="submit">Change Password</button>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Popup End -->
     </header>
+    <!-- Nav End -->
 
 
 
@@ -286,10 +311,7 @@
             </div>
         </section>
         <section class="section_map">
-
-
             <div class="Map_svg container">
-
                 <div class="gaza_strip">
                     <div class="home_maps">
                         <div class="palestine">
@@ -310,7 +332,7 @@
                                 <div class="info">
                                     <div class="red_circle"></div>
                                     <div class="text">
-                                        <p>Displaced persons gathering</p>
+                                        <p style="transform: translateX(10px) ; ">Displaced persons gathering</p>
                                     </div>
                                 </div>
                             </div>
@@ -358,7 +380,7 @@
                             <img src="./assets/img/no (5).png" alt="" srcset="">
 
                         </div>
-                        <div class="Khan_younes ">
+                        <div class="Khan_younes move">
                             <div class="rotations">
                                 <div class="center_img">
 
@@ -405,7 +427,7 @@
                         </div>
 
                         <!-- dair  3 (a/b/c) -->
-                        <div class="Dair ">
+                        <div class="Dair move">
                             <div class="rotations">
                                 <div class="dair_camps">
                                     <img class="dair_camp1 camp-image" data-popup="popup3" src="./assets/img/camp.png"
@@ -519,7 +541,7 @@
 
                         </div>
 
-                        <div class="gaza">
+                        <div class="gaza move">
                             <div class="rotations">
                                 <div class="center_img">
                                     <img class="camp2 camp-image" data-popup="popup6" src="./assets/img/camp.png" alt=""
@@ -561,7 +583,7 @@
 
                         </div>
 
-                        <div class="north_gaza">
+                        <div class="north_gaza move">
                             <div class="rotations">
                                 <div class="center_img">
                                     <img class="camp1 camp-image" data-popup="popup7" src="./assets/img/camp.png" alt=""
@@ -599,8 +621,7 @@
                                 </div>
                                 <h1 id="Member1">North Gaza</h1>
                             </div>
-                            <img src="./assets/img/no (1).png" id="Member1"  alt="" srcset="">
-
+                            <img src="./assets/img/no (1).png" id="Member1" alt="" srcset="">
                         </div>
 
 
@@ -610,7 +631,7 @@
                             <path id="path1" class="paths" style="cursor: pointer;"
                                 d="M46.3001 726.695L160.159 686.367L162.31 705.718L226.296 807.309L230.06 829.885L231.673 840.098L241.351 853.536L217.692 874.499L189.732 891.163L203.712 933.089L210.165 921.801L237.587 968.028L262.321 975.016L289.744 982.541L269.849 1008.34L275.764 1014.79L267.698 1036.83L260.171 1057.26L247.804 1145.95C247.804 1145.95 228.832 1152.08 213.929 1154.01C200.185 1155.79 192.299 1154.01 178.44 1154.01C153.662 1154.01 136.63 1150.31 112.841 1157.24C94.7086 1162.52 89.7064 1169.31 72.5139 1177.12C56.1824 1184.55 46.2889 1186.93 29.498 1193.25C18.3654 1197.44 1 1204 1 1204L62.2976 865.362L54.2322 861.599L46.3001 857.299L46.3001 726.695Z"
                                 fill="#CCCCCC"></path>
-                            <path 
+                            <path
                                 d="M101.012 1157.77V1161.54M101.012 1161.54L87.5695 1169.06L75.2024 1176.05L61.2222 1181.96L36.4881 1191.1L1 1204L23.5833 1078.76L72.5139 1058.82L101.012 1047.58L130.048 1042.21H166.073L198.873 1039.52L217.155 1037.91L231.673 1034.68L245.115 1028.77L253.181 1022.86L263.397 1013.18L270.5 1008L275.5 1015L259.633 1058.87L247.804 1145.95L233.286 1150.25L215.542 1154.01L200.486 1155.09L181.129 1154.01L161.234 1153.47H155.319L145 1153.5L141 1153L125.746 1154.55L117.681 1155.89M101.012 1161.54L110.153 1158.31L117.681 1155.89M117.47 1154.01L117.681 1155.89"
                                 stroke="white" stroke-width="0.5"></path>
                             <path
@@ -1434,11 +1455,11 @@
                                 fill="#FF0000"></ellipse>
                         </svg>
 
-                       
+
                     </div>
                     <div class="pop_up">
                         <div class="statistics">
-                            <div class="camps">
+                            <div class="camps" style="transform: translateY(-12px);">
                                 <div class="total_camps"></div>
                                 <div class="camps_info">
                                     <img class="custom" src="./assets/img/camp.png" alt="" srcset="">
@@ -1446,7 +1467,7 @@
                                     <p class="total">Total Number Of Camps</p>
                                 </div>
                             </div>
-                            <div class="displaced">
+                            <div class="displaced" style="transform: translateY(-12px)">
                                 <div class="total_displaced"></div>
                                 <div class="displaced_info">
                                     <img class="custom" src="./assets/img/Group.png" alt="" srcset="">
@@ -1457,58 +1478,57 @@
                             <div class="water_req">
                                 <div class="total_req"></div>
                                 <div class="req_info">
-                                    <img src="./assets/img/Vector.png" alt="" srcset="">
+                                    <img class="custom" src="./assets/img/Vector.png" alt="" srcset="">
                                     <h1 class="total_num">+210M L</h1>
                                     <p class="total">Total Amount Of Water Required</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-               
+                    <style>
+                        .custom {
+                            border: solid 1px #0000003b !important;
+                            padding: 5px;
+                            border-radius: 10px;
+                            width: 50px;
+                            height: 50px;
+                        }
+                    </style>
                 </div>
 
             </div>
             <div class="container">
-<!-- Slide Maps Rafah-->
-<div id="slide1" class="slide">
-    <div id="error1" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
-    <div>
-        Rafah
-        <!-- Write Here -->
+                <!-- Slide Maps Rafah-->
+                <div id="slide1" class="slide">
+                    <div id="error1" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
+                    <div>
+                        Rafah
+                        <!-- Write Here -->
+                    </div>
 
-    </div>
+                </div>
 
-</div>
+                <!-- Slide2 Gaza City-->
+                <div id="slide2" class="slide">
+                    <div id="error2" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
+                    2
+                    <div>
+                        Gaza City
+                        <!-- Write Here -->
+                    </div>
 
-<!-- Slide2 Gaza City-->
-<div id="slide2" class="slide">
-    <div id="error2" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
-2
-    <div>
-        Gaza City
-        <!-- Write Here -->
+                </div>
 
-    </div>
+                <!-- Slide3 Khan Younes-->
+                <div id="slide3" class="slide">
+                    <div id="error3" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
 
-</div>
-
-<!-- Slide3 Khan Younes-->
-<div id="slide3" class="slide">
-    <div id="error3" class="error"><i class="fa-solid fa-angle-right" id="icon"></i></div>
-
-    <div>
-        Khan Younes
-        <!-- Write Here -->
-
-    </div>
-
-</div>
-
-<!-- <div id="slide2" class="slide">Slide 2 Content</div> -->
-
-<!-- <div id="error2" class="error">&#10006;</div> -->
+                    <div>
+                        Khan Younes
+                        <!-- Write Here -->
+                    </div>
+                </div>
             </div>
- 
         </section>
     </main>
 
